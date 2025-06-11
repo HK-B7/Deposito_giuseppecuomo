@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+int val_1;
+int val_2;
+char nome[20];
+
+printf ("Inserisci il tuo nome: ");
+
+if (scanf("%19s", nome) != 1) {
+        printf("Input non valido per il nome.\n");
+        return 1;
+    }
+
+printf ("Inseirisci ora un numero intero: ");
+
+if (scanf("%d", &val_1) != 1) {
+        printf("Input non valido\n");
+        return 1;
+}
+printf ("Ora inserisci il secondo numero intero: ");
+
+if (scanf("%d", &val_2) != 1) {
+        printf("Input non valido\n");
+        return 1;
+}
+int somma = val_1 + val_2;
+printf("Il tuo nome è %s, e la somma dei tuoi numeri è %d\n", nome, somma);
+return 0;
+}
+
