@@ -1,0 +1,32 @@
+#include <stdio.h>
+char città[100];
+float numero1, numero2, numero3;
+float media;
+
+int main (){
+    printf("Inserisci il nome della tua città: ");
+    if (scanf ("%s",città)!=1){
+        printf("Nome inserito non valido.\n");
+        return 1;
+    }
+    printf("Inserisci un numero decimale, usando il punto come separatore: ");
+    if (scanf("%f", &numero1)!=1){
+        printf("Numero inserito non valido.\n");
+        return 1;
+    }
+      printf("Inserisci un nuovo numero decimale, usando il punto come separatore: ");
+    if (scanf("%f", &numero2)!=1){
+        printf("Numero inserito non valido.\n");
+        return 1;
+    }
+      printf("Inserisci un ultimo numero decimale, usando il punto come separatore: ");
+    if (scanf("%f", &numero3)!=1){
+        printf("Numero inserito non valido.\n");
+        return 1;
+    }
+    
+    media = (numero1 + numero2 + numero3)/3;
+    
+    printf("La tua città è %s e la media dei tuoi numeri è %2f", città, media);
+    return 0;
+    }
