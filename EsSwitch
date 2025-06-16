@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char giorno[10];
+    int numero = 0;
+
+    printf("Inserisci il nome di un giorno della settimana: ");
+    scanf("%s", giorno);
+
+    if (strcmp(giorno, "lunedi") == 0) {
+        numero = 1;
+    } else if (strcmp(giorno, "martedi") == 0) {
+        numero = 2;
+    } else if (strcmp(giorno, "mercoledi") == 0) {
+        numero = 3;
+    } else if (strcmp(giorno, "giovedi") == 0) {
+        numero = 4;
+    } else if (strcmp(giorno, "venerdi") == 0) {
+        numero = 5;
+    } else if (strcmp(giorno, "sabato") == 0) {
+        numero = 6;
+    } else if (strcmp(giorno, "domenica") == 0) {
+        numero = 7;
+    } else {
+        printf("Errore: input non valido.\n");
+        return 1;
+    }
+    
+      switch (numero) {
+        case 1: printf("Hai scelto Lunedi\n"); break;
+        case 2: printf("Hai scelto Martedi\n"); break;
+        case 3: printf("Hai scelto Mercoledi\n"); break;
+        case 4: printf("Hai scelto Giovedi\n"); break;
+        case 5: printf("Hai scelto Venerdi\n"); break;
+        case 6: printf("Hai scelto Sabato\n"); break;
+        case 7: printf("Hai scelto Domenica\n"); break;
+        default: printf("Errore: numero non valido.\n"); break;
+    }
+
+    return 0;
+}
