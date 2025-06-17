@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int numero, somma = 0;
+    
+    printf("Inserisci numeri interi (0 per terminare):\n");
+    
+    while (1) {
+        scanf("%d", &numero);
+        
+        if (numero == 0) {
+            break;
+        }
+        
+        if (numero > 0) {
+            somma += numero;
+        }
+    }
+    
+    printf("La somma totale dei numeri positivi inseriti è: %d\n", somma);
+    
+    return 0;
+}
