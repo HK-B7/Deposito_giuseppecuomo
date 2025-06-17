@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    char risposta;
+    int numero, pari_count = 0;
+    do {
+        printf("Inserisci un numero intero: ");
+        scanf("%d", &numero);
+        if (numero % 2 == 0) {
+            pari_count++;
+        }
+       do {
+            printf("Vuoi continuare? (s per si, n per no): ");
+            scanf(" %c", &risposta);
+        } while (risposta != 's' && risposta != 'n');
+    } while (risposta != 'n');
+    printf("Hai inserito %d numeri pari.\n", pari_count);
+
+    return 0;
+}
