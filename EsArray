@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int numeri[50]; // Array con capienza massima di 50 numeri
+    int n, i, valore, contatore = 0;
+
+    printf("Quanti numeri vuoi inserire? (massimo 50): ");
+    scanf("%d", &n);
+
+    if (n <= 0 || n > 50) {
+        printf("Numero non valido! Inserisci un numero tra 1 e 50.\n");
+        return 1;
+    }
+
+    for (i = 0; i < n; i++) {
+        printf("Inserisci il numero %d: ", i + 1);
+        scanf("%d", &numeri[i]);
+    }
+
+    printf("Inserisci il valore da cercare nell'array: ");
+    scanf("%d", &valore);
+
+    for (i = 0; i < n; i++) {
+        if (numeri[i] == valore) {
+            contatore++;
+        }
+    }
+
+    printf("Il valore %d appare %d volte nell'array.\n", valore, contatore);
+
+    return 0;
+}
